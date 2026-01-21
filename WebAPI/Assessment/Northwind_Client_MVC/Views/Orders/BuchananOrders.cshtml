@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Northwind_Client_MVC.Models.OrderVM>
+@{
+    ViewBag.Title = "BuchananOrders";
+}
+
+<h2>BuchananOrders</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Order ID</th>
+        <th>Customer ID</th>
+        <th>Order Date</th>
+    </tr>
+@foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.OrderID</td>
+                    <td>@item.CustomerID</td>
+                    <td>@item.OrderDate</td>
+                </tr>
+            }
+
+</table>
